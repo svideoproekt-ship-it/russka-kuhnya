@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import SoupCategory from './pages/SoupCategory';
@@ -27,6 +28,7 @@ function App() {
         <Route path="/category/drinks" element={<DrinksCategory />} />
         <Route path="/category/dough" element={<DoughCategory />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
